@@ -1,0 +1,72 @@
+# Maintainer tangfeixiong <fxtang@qingyuanos.com>
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  annotations:
+    qingyuanos.io/catalog-by: '{"version": "v1alpha", "lib": "https://github.com/qingyuancloud/kube-harpoon"}'
+  labels:
+    app: hadoop
+    heritage: qingyuancloud
+    version: 2.7.3
+  name: serving-external-hadoop
+spec:
+  ports:
+  - name: "resman-web"
+    protocol: "TCP"
+    port: 8088
+    targetPort: 8088
+    nodePort: 0
+  - name: "resman-admin"
+    protocol: "TCP"
+    port: 8033
+    nodePort: 0
+  - name: "resman"
+    protocol: "TCP"
+    port: 8032
+    nodePort: 0
+  - name: "nodeman-web"
+    protocol: "TCP"
+    port: 8042
+    nodePort: 0
+  - name: "mr2jobhistory"
+    protocol: "TCP"
+    port: 19888
+    nodePort: 0
+  - name: "namenode-http"
+    protocol: "TCP"
+    port: 50070
+    nodePort: 0
+  - name: "namenode"
+    protocol: "TCP"
+    port: 8020
+    nodePort: 0
+  - name: "datanode-http"
+    protocol: "TCP"
+    port: 50075
+    nodePort: 0
+  - name: "datanode-ipc"
+    protocol: "TCP"
+    port: 50020
+    nodePort: 0
+  - name: "datanode"
+    protocol: "TCP"
+    port: 50010
+    nodePort: 0
+  - name: "secondarynamenode"
+    protocol: "TCP"
+    port: 50090
+    nodePort: 0
+  - name: "jobtracker-http"
+    protocol: "TCP"
+    port: 50030
+    nodePort: 0
+  - name: "jobtracker"
+    protocol: "TCP"
+    port: 8021
+    nodePort: 0
+  - name: "tasktracker-http"
+    protocol: "TCP"
+    port: 50060
+    nodePort: 0
+  selector: {}

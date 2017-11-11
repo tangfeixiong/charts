@@ -1,0 +1,19 @@
+projectName: springbootappproject
+configName: springbootappbuildconfig
+buildTriggers:
+- gitHubWebHook:
+    secret: springbootappsecretgit
+    basicauth:
+      username: foo
+      password: bar
+      token: ''
+    sshauth:
+      rsapub: ''
+- genericWebHook: null
+- imageChange: null
+- configChange: null
+runPolicy: Parallel
+commonSpec:
+
+buildName: springbootappbuild
+

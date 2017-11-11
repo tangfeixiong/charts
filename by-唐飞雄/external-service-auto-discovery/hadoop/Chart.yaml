@@ -1,0 +1,14 @@
+description: A Helm chart for Kubernetes that exposing external Hadoop cluster
+name: hadoop
+version: 0.1.0
+keywords:
+- hadoop
+- bigdata
+home: http://hadoop.apache.org/
+sources:
+- https://github.com/qingyuancloud/kube-harpoon/app-template/k8s-resource-manifest-lab/hadoop/external-service-auto-discovery
+maintainers:
+- name: tangfeixiong
+  email: tangfx128@gmail.com
+engine: gotpl
+icon: http://hadoop.apache.org/images/hadoop-logo.jpg

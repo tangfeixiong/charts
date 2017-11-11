@@ -1,0 +1,88 @@
+# Default values for hadoop.
+# This is a YAML-formatted file.
+# Declare name/value pairs to be passed into your templates.
+# name: value
+name: external-hadoop-managed-service
+hadoopVersion: 2.7.3
+addresses:
+- ip: 192.168.0.10
+  hostname: ''
+  dfs:
+    http:
+      port: 50070
+    namenode:
+      http_port: 50070
+      https_port: 0 # 50470
+      servicerpc_port: 8022
+    secondary:
+      http_port: 50090
+      https_port: 0 # 50495
+    datanode:
+      port: 50010
+      secure: 0 # 1004
+      http:
+        port: 50075
+        secure: 0 # 1006
+      https:
+        port: 0 # 50475
+      ipc:
+        port: 50020
+  fs:
+    default:
+      port: 0 # 8020
+    defaultFS: 0
+  yarn:
+    resourcemanager:
+      port: 8032
+      http:
+        policy: HTTP_ONLY
+      scheduler:
+        port: 8030
+      webapp:
+        port: 8088
+        https: 
+          port: 8090
+      resource-tracker:
+        port: 8031
+      admin:
+        port: 8033
+    nodemanager:
+      port: 45454
+      localizer:
+        port: 8040
+      webapp:
+        port: 8042
+        https:
+          port: 8044
+    timeline-service:
+      enabled: false
+      port: 10200
+      webapp:
+        port: 8188
+  mapreduce:
+    jobhistory:
+      port: 10020
+      admin:
+        port: 10033
+      http:
+        policy: HTTP_ONLY
+      webapp:
+        port: 19888
+        https:
+          port: 19890
+    shuffle:
+      port: 13562
+  mapred:
+    job:
+      tracker:
+        port: 8021
+        http:
+          port: 50030
+    ha:
+      job:
+        tracker:
+          port: 8023
+    task:
+      tracker: 
+        http:
+          port: 50060

@@ -1,0 +1,15 @@
+description: A Helm Chart for Openshift that to run s2i building
+name: springbootapp
+version: 0.1.0
+keywords:
+- ci
+- docker
+- build
+home: https://github.com/openshift/origin
+sources:
+- https://github.com/qingyuancloud/kube-harpoon/app-template/k8s-resource-manifest-lab/hadoop/external-service-auto-discovery
+maintainers:
+- name: tangfeixiong
+  email: tangfx128@gmail.com
+engine: gotpl
+icon: https://assets.openshift.net/content/subdomain/openshift-logo-horizontal.svg
